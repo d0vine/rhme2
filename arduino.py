@@ -24,3 +24,5 @@ class ArduinoDevice:
     def send_line(self, data):
         self.send(data + b'\r\n')
 
+    def cleanup(self):
+        self.serial_device.close()
