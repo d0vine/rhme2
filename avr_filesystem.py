@@ -1,4 +1,3 @@
-# import serial
 import arduino
 import hashpumpy
 import time
@@ -8,9 +7,9 @@ MAGIC_SLEEP_TIME = 2
 print('[ ] Initializing...')
 nano = arduino.ArduinoDevice()
 time.sleep(MAGIC_SLEEP_TIME) # magic!
-print('[+] Task initialized.')
 nano.recv()
-# print(nano.recv().decode('utf-8').replace('\\r\\n', '\r\n'))
+print('[+] Task initialized.')
+
 time.sleep(MAGIC_SLEEP_TIME)
 
 # 1 because 0-length key doesn't make sense; 16 is a wild guess, but worked :D
